@@ -57,6 +57,8 @@ for i in dic_analysis:
 li_key = []
 li_value = []
 for i in dic_analysis:
+    if count>100:
+        break
     if dic_analysis[i]>mean:
         li_key.append(i)
         li_value.append(dic_analysis[i])
@@ -79,5 +81,3 @@ plt.bar(li_key,li_value)
 plt.xticks(x,li_key,fontproperties=myfont)
 plt.savefig("Correlation of Views and Tags Chart")
 plt.show()
-
-print(count)
