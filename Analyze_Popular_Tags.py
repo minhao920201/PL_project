@@ -35,12 +35,14 @@ for i in range(length):
         if li_value[i] == dic[j]:
             li_key_sorted.append(j)
 
-
+Popular = 0
 dic_sort = {}
 #利用迴圈印出排序後的結果
 for i in range(length):
     dic_sort[li_key_sorted[i]] = li_value[i]
-    print(li_key_sorted[i],":",li_value[i])
+    if Popular <= 10:
+        print(li_key_sorted[i],":",li_value[i])
+    Popular += 1
 
 
 # 做出文字雲
